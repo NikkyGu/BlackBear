@@ -3,12 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Bear Tree Service's</title>
+    <title>Black Bear Tree Service</title>
     <style>
         body {
             margin: 0;
             font-family: 'Optima', 'Segoe', 'Candara', sans-serif;;
         }
+
+         .contact-section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-out;
+            background-color: #ffffff;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000;
+            animation: popIn 1s ease-out;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-section label {
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .contact-section input,
+        .contact-section select,
+        .contact-section button {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .contact-section input:focus,
+        .contact-section select:focus {
+            outline: none;
+            border-color: #000000;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+
+        .contact-section button {
+            background-color: #FF570C;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-section button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+
+
+
 
          .navbar {
             position: sticky;
@@ -657,6 +743,16 @@
                 transform: translateX(0);
                 opacity: 1;
             }
+             @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+             }
+       
+        
         }
 
 
@@ -884,6 +980,11 @@
                 text-align: left;
                 padding: 0 10px;
             }
+            .contact-section {
+                max-width: 100%;
+                margin: 10px;
+                padding: 15px;
+            }
 
 
     </style>
@@ -1012,6 +1113,30 @@
         <p>Join us as we continue to create solutions that make a difference and help shape a better future.</p>
     </div>
 </section>
+<section class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+                <option value="">--Select a Service--</option>
+                <option value="tree_removal">Tree Removal</option>
+                <option value="tree_cutting">Tree Cutting</option>
+                <option value="stump_grinding">Stump Grinding</option>
+                <option value="firewood">Firewood</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="snow_removal">Snow Removal</option>
+                <option value="emergency_storm_damage">Emergency Storm Damage</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
 </body>
 </html>
