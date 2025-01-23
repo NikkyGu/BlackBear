@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Black Bear Tree Service</title>
     <style>
         body {
@@ -556,7 +556,7 @@
         }
 
         .choose-us-content button:hover {
-            background-color: #e64a19;
+            background-color: #000000;
             transform: scale(1.1);
         }
 
@@ -784,8 +784,16 @@
                 opacity: 1;
             }
              }
-       
-        
+             button, a {
+                touch-action: manipulation;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            button:active, a:active {
+                transform: scale(0.98);
+                opacity: 0.8;
+            }
         }
 
 
@@ -797,8 +805,21 @@
 
         /* Responsive Design  Iphone*/
         @media (max-width: 769px) {
-             
-             .navbar {
+        .navbar a {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: none;
+            }
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+            }
+        .navbar {
             position: sticky;
             top: 0;
             background-color: #FF570C;
@@ -997,7 +1018,8 @@
             .video-section {
                 flex-direction: column;
                 text-align: center;
-                padding: 30px;
+                padding: 15px;
+                top-margin: 0px;
             }
 
             .video-container {
@@ -1036,23 +1058,23 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <img src="https://i.ibb.co/3BYZdj1/black-bear-tree-services-logo-222w-png-processed.png" alt="My Logo">
         </a>
         <div class="dropdown">
             <a href="#services" class="dropbtn">Services</a>
             <div class="dropdown-content">
-                <a href="#service 1">Tree Removal</a>
-                <a href="#service2">Tree Trimming</a>
-                <a href="#service3">Stump Grinding</a>
-                <a href="#service4">Emergency Storm Damage</a>
-                <a href="#service5">Firewood</a>
-                <a href="#service6">Snow Removal</a>
-                <a href="#service7">LandScaping</a>
+                <a href="tree-Removal.html">Tree Removal</a>
+                <a href="Tree-Trimming.html">Tree Trimming</a>
+                <a href="Stump-Grinding.html">Stump Grinding</a>
+                <a href="Emergency.html">Emergency Storm Damage</a>
+                <a href="firewood.html">Firewood</a>
+                <a href="Snow-removal.html">Snow Removal</a>
+                <a href="Landscaping.html">LandScaping</a>
             </div>
         </div>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
+        <a href="About-Us.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
         
     </div>
 
@@ -1060,7 +1082,7 @@
         <div class="hero-content">
             <h1>Expert Tree Service's</h1>
             <p>Bergen County, NJ</p>
-            <button onclick="location.href='#estimate'">Free Estimate</button>
+            <button onclick="location.href='Free-Estimate.html'">Free Estimate</button>
         </div>
     </div>
 
@@ -1137,7 +1159,7 @@
             With a passionate team and a commitment to excellence, we strive to make a positive impact
             in the world through our work. Join us on this exciting journey!
         </p>
-        <button>Learn More</button>
+       <button onclick="location.href='About-Us.html'">More Info</button>
     </div>
 </section>
 <section class="choose-us-section">
@@ -1145,7 +1167,7 @@
         <h2>Why Choose Us?</h2>
         <p>Choose our tree company for professional, reliable, and exceptional service. Our certified arborists deliver expert tree care, from removal and pruning to stump grinding and storm damage assistance, using safe and efficient techniques.</p>
         <p>We prioritize customer satisfaction with tailored services, competitive pricing, and a commitment to enhancing your property’s beauty and value. Trust us to care for your trees like our own. We have 25 years of experiance. </p>
-        <button>Gallery</button>
+       <button onclick="location.href='Gallery.html'">Explore Gallery</button>
     </div>
     <div class="choose-us-image">
         <img src="https://i.ibb.co/3ywxHPK/IMG-8189.jpg" alt="Why Choose Us">
@@ -1196,7 +1218,7 @@
         </div>
 
         <div class="privacy-policy">
-            <a href="#">Privacy Policy</a>
+            <a href="Privacy-Policy.html">Privacy Policy</a>
         </div>
     </footer>
 </body>
